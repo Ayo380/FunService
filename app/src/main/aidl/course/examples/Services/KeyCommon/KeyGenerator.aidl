@@ -1,3 +1,6 @@
+//Name: Ayokunle Olugboyo
+
+
 package course.examples.Services.KeyCommon;
 
    interface KeyGenerator {
@@ -6,4 +9,4 @@ package course.examples.Services.KeyCommon;
                     void pauseclip();
                     void resumeclip();
                     void stopclip();
-   }
+                    }

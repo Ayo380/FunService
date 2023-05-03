@@ -1,3 +1,6 @@
+//Name: Ayokunle Olugboyo
+
+
 package course.examples.Services.FunCenter;
 
 import android.app.Service;
@@ -20,21 +23,19 @@ import course.examples.Services.KeyService.R;
 //KeyGeneratorServiceApp
 public class KeyGeneratorImpl extends Service {
 
-    // Set of already assigned IDs
-    // Note: These keys are not guaranteed to be unique if the Service is killed
+    // Set of already assigned ID
     // and restarted.
 
     @Override
     public void onCreate() {
 
         super.onCreate();
-        Log.i("KeyGeneratorService", "Servive was created!") ;
+        Log.i("GeneratorService", "Servive was created!") ;
     }
 
     MediaPlayer mediaPlayer;
     Context context = this;
     Bitmap bitmap = null;
-    private final static Set<UUID> mIDs = new HashSet<UUID>();
 
     // Implement the Stub for this Object
     private final KeyGenerator.Stub mBinder = new KeyGenerator.Stub() {
@@ -60,7 +61,7 @@ public class KeyGeneratorImpl extends Service {
 
 
         }
-
+        // the API that plays the clip
         @Override
         public void playclip(int id) throws RemoteException {
 
@@ -114,7 +115,7 @@ public class KeyGeneratorImpl extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy() ;
-        Log.i("KeyGeneratorService", "Service went away!") ;
+        Log.i("GeneratorService", "Service went away!") ;
     }
 
 }
